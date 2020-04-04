@@ -28,9 +28,9 @@ Source code for the paper: **ProteinGCN: Protein model quality assessment using 
   ```shell
   python train.py trial_run --epochs 10
   ```
-  Once successfully run, this creates a folder by the name `trail_run` under the path `./data/pkl/results/` which contains the test results `test_results.csv` and best model checkpoint `model_best.pth.tar`. Rest of the training arguments and the defaults can be found in `arguments.py`.
+  Once successfully run, this creates a folder by the name `trial_run` under the path `./data/pkl/results/` which contains the test results `test_results.csv` and best model checkpoint `model_best.pth.tar`. Rest of the training arguments and the defaults can be found in `arguments.py`.
 
-- To get the final pearson correlation scores run:
+- To get the final pearson correlation scores, run:
   ```shell
   python correlation.py -file ./data/pkl/results/trial_run/test_results.csv
   ``` 
