@@ -35,4 +35,9 @@ Source code for the paper: **ProteinGCN: Protein model quality assessment using 
   python correlation.py -file ./data/pkl/results/trial_run/test_results.csv
   ``` 
 
+- We also publish our best ProteinGCN model that was trained on Rosetta-300k dataset. To run the pretrained model on the sample data, execute:
+```shell
+python train.py trial_testrun --pretrained ./pretrained/pretrained.pth.tar --epochs 0 --train 0 --val 0 --test 1
+```
+
 For any clarification, comments, or suggestions please create an issue or contact [Soumya](https://soumyasanyal.github.io/).
