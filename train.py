@@ -39,12 +39,12 @@ def main():
 	indices     = list(range(dir_len))
 	random.shuffle(indices)
 
-	train_size  = max(math.floor(args.train * dir_len), 1)
-	val_size    = max(math.floor(args.val * dir_len), 1)
-	test_size   = max(math.floor(args.test * dir_len), 1)
-	train_dirs  = all_dirs[:train_size]
-	val_dirs    = all_dirs[train_size:train_size + val_size]
-	test_dirs   = all_dirs[train_size + val_size:train_size + val_size + test_size]
+	train_size  = math.floor(args.train * dir_len)
+	val_size    = math.floor(args.val * dir_len)
+	test_size   = math.floor(args.test * dir_len)
+	test_dirs   = all_dirs[:test_size]
+	train_dirs  = all_dirs[test_size:test_size + train_size]
+	val_dirs   	= all_dirs[test_size + train_size:test_size + train_size + val_size]
 	print('Testing on {} protein directories:'.format(len(test_dirs)))
 
 	dataset = ProteinDataset(args.pkl_dir, args.id_prop, args.atom_init, random_seed=args.seed)
