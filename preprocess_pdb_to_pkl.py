@@ -128,7 +128,7 @@ def createSortedNeighbors(contacts, bonds, max_neighbors):
 def get_targets(directory, filename):
 	"""
 	Get the global and local targets for given filename in the directory.
-	Please note that this is specific to the UW-300k dataset. Other
+	Please note that this is specific to the Rosetta-300k dataset. Other
 	datasets might have different format to save targets and this function
 	needs to change accordingly.
 	"""
