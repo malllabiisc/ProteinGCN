@@ -14,7 +14,7 @@ Source code for the paper: **ProteinGCN: Protein model quality assessment using 
 
 ### Dataset:
 
-- We use Rosetta-300k to train the ProteinGCN model and test it on both Rosetta-300k and CASP13 dataset for local(residue) and global Quality Assessment predictions.
+- We use Rosetta-300k to train the ProteinGCN model and test it on both Rosetta-300k and [CASP13](http://predictioncenter.org/download_area/CASP13/server_predictions/) dataset for local(residue) and global Quality Assessment predictions.
 
 ### Training model:
 
@@ -28,7 +28,7 @@ Source code for the paper: **ProteinGCN: Protein model quality assessment using 
   ```shell
   python train.py trial_run --epochs 10
   ```
-  Once successfully run, this creates a folder by the name `trial_run` under the path `./data/pkl/results/` which contains the test results `test_results.csv` and best model checkpoint `model_best.pth.tar`. Rest of the training arguments and the defaults can be found in `arguments.py`.
+  Once successfully run, this creates a folder by the name `trial_run` under the path `./data/pkl/results/` which contains the test results `test_results.csv` and best model checkpoint `model_best.pth.tar`. Rest of the training arguments and the defaults can be found in `arguments.py`. We support multi-gpu training using PyTorch [DataParallel](https://pytorch.org/docs/master/nn.html#dataparallel-layers-multi-gpu-distributed) on a single server by default. To enable multi-gpu training, just set the required number of gpus in `CUDA_VISIBLE_DEVICES` environment.
 
 - To get the final pearson correlation scores, run:
   ```shell
