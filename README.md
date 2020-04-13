@@ -1,7 +1,7 @@
 ## ProteinGCN: Protein model quality assessment using Graph Convolutional Networks
  
 
-Source code for the paper: **ProteinGCN: Protein model quality assessment using Graph Convolutional Networks**
+Source code for the paper: **[ProteinGCN: Protein model quality assessment using Graph Convolutional Networks](https://www.biorxiv.org/content/10.1101/2020.04.06.028266v1)**
 
 ![](./overview.png)
 
@@ -40,4 +40,17 @@ Source code for the paper: **ProteinGCN: Protein model quality assessment using 
   python train.py trial_testrun --pretrained ./pretrained/pretrained.pth.tar --epochs 0 --train 0 --val 0 --test 1
   ```
 
+
+Please cite the following paper if you use this code in your work.
+```bibtex
+@article {Sanyal2020.04.06.028266,
+	author = {Sanyal, Soumya and Anishchenko, Ivan and Dagar, Anirudh and Baker, David and Talukdar, Partha},
+	title = {ProteinGCN: Protein model quality assessment using Graph Convolutional Networks},
+	year = {2020},
+	doi = {10.1101/2020.04.06.028266},
+	publisher = {Cold Spring Harbor Laboratory},
+	URL = {https://www.biorxiv.org/content/early/2020/04/07/2020.04.06.028266},
+	journal = {bioRxiv}
+}
+```
 For any clarification, comments, or suggestions please create an issue or contact [Soumya](https://soumyasanyal.github.io/).
