@@ -195,7 +195,12 @@ class ProteinGCN(nn.Module):
 
 		max_idx                 = torch.max(atom_amino_idx)
 		min_idx                 = torch.min(atom_amino_idx)
-		mask_pooled             = atom_amino_idx.new_full(size=(max_idx+1,1), fill_value=1, dtype=torch.bool)
+		
+		if torch.__version__ > '1.2':
+			mask_pooled     = atom_amino_idx.new_full(size=(max_idx+1,1), fill_value=1, dtype=torch.bool)  # torch>1.2
+		else:
+			mask_pooled     = atom_amino_idx.new_full(size=(max_idx+1,1), fill_value=1, dtype=torch.unit8) # torch<=1.2
+		
 		mask_pooled[:min_idx]   = 0
 		pooled                  = scatter_add(atom_emb.t(), atom_amino_idx).t()
 
