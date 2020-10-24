@@ -17,9 +17,9 @@ def buildParser():
 	parser.add('--seed',        default=1234,                       help='Seed for random number generation',   type=int)
 	parser.add('--epochs',      default=100,                        help='Number of epochs',                    type=int)
 	parser.add('--batch_size',  default=3,                          help='Batch size for training',             type=int)
-	parser.add('--train',       default=0.6,                        help='Fraction of training data',           type=float)
-	parser.add('--val',         default=0.2,                        help='Fraction of validation data',         type=float)
-	parser.add('--test',        default=0.2,                        help='Fraction of test data',               type=float)
+	parser.add('--train',       default=0.5,                        help='Fraction of training data',           type=float)
+	parser.add('--val',         default=0.25,                       help='Fraction of validation data',         type=float)
+	parser.add('--test',        default=0.25,                       help='Fraction of test data',               type=float)
 	parser.add('--testing',                                         help='If only testing the model',           action='store_true')
 
 	# Optimizer setup

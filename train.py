@@ -42,6 +42,13 @@ def main():
 	train_size  = math.floor(args.train * dir_len)
 	val_size    = math.floor(args.val * dir_len)
 	test_size   = math.floor(args.test * dir_len)
+
+	if val_size == 0:
+		print('No protein directory given for validation!! Please recheck the split ratios, ignore if this is intended.')
+	if test_size == 0:
+		print('No protein directory given for testing!! Please recheck the split ratios, ignore if this is intended.')
+
+
 	test_dirs   = all_dirs[:test_size]
 	train_dirs  = all_dirs[test_size:test_size + train_size]
 	val_dirs   	= all_dirs[test_size + train_size:test_size + train_size + val_size]
