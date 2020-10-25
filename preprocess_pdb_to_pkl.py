@@ -49,7 +49,7 @@ def runCommands(directory):
 
 	Parameters
 	----------
-	directory: The folder contating pdb files for a protein.
+	directory: The folder containing pdb files for a protein.
 
 	"""
 	path            = datapath + directory + '/'
