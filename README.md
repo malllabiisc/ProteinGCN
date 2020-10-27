@@ -28,7 +28,7 @@ Source code for the paper: **[ProteinGCN: Protein model quality assessment using
   ```shell
   python train.py trial_run --epochs 10
   ```
-  Once successfully run, this creates a folder by the name `trial_run` under the path `./data/pkl/results/` which contains the test results `test_results.csv` (where each row has the protein model name, target global score, preditcted global score, target local scores, and predicted local scores) and best model checkpoint `model_best.pth.tar`. Rest of the training arguments and the defaults can be found in `arguments.py`. We support multi-gpu training using PyTorch [DataParallel](https://pytorch.org/docs/master/nn.html#dataparallel-layers-multi-gpu-distributed) on a single server by default. To enable multi-gpu training, just set the required number of gpus in `CUDA_VISIBLE_DEVICES` environment.
+  Once successfully run, this creates a folder by the name `trial_run` under the path `./data/pkl/results/` which contains the test results `test_results.csv` (where each row has the protein model name, target global score, predicted global score, target local scores, and predicted local scores) and best model checkpoint `model_best.pth.tar`. Rest of the training arguments and the defaults can be found in `arguments.py`. We support multi-gpu training using PyTorch [DataParallel](https://pytorch.org/docs/master/nn.html#dataparallel-layers-multi-gpu-distributed) on a single server by default. To enable multi-gpu training, just set the required number of gpus in `CUDA_VISIBLE_DEVICES` environment.
 
 5) To get the final pearson correlation scores, run:
   ```shell
